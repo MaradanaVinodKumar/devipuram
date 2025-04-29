@@ -1,17 +1,21 @@
 
 
+
 import './App.css';
-import Devipuram from './components/Devipuram';
-import Guruji from './components/Guruji';
-import Homepage from './components/Homepage';
-import PoojasAndHomas from './components/PoojasAndHomas';
-import WLight from './components/WLight';
+import { Navigation } from './Pages/Navigationbar/Navigation';
+
+import Devipuram from './Pages/Devipurampage/Devipuram';
+import Guruji from './Pages/Gurujipage/Guruji';
+import Homepage from './Pages/Homepage/Homepage';
+import PoojasAndHomas from './Pages/Poojasandhomaspage/PoojasAndHomas';
+// import WLight from './components/WLight';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-      <WLight />
+      <Navigation />
+      {/* <WLight /> */}
       <Routes>
         <Route  path="/" element={<Homepage />} />
         <Route path="Home" element={<Homepage />} />

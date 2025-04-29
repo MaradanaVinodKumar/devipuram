@@ -1,5 +1,5 @@
 import React from 'react';
-import { SRICHAKRA } from '../Constants/Images';
+import { SRICHAKRA } from '../../../Constants/Images';
 
 const SriChakraSection = () => {
   const [isClicked, setIsClicked] = React.useState(false);

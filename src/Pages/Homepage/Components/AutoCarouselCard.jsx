@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SCROLL_IMAGE1, SCROLL_IMAGE2, SCROLL_IMAGE3, SCROLL_IMAGE4 } from '../Constants/Images';
+import { SCROLL_IMAGE1, SCROLL_IMAGE2, SCROLL_IMAGE3, SCROLL_IMAGE4 } from '../../../Constants/Images';
 
 const cards = [
   {
