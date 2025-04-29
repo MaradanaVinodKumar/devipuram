@@ -14,7 +14,7 @@ import { Courses } from './Components/Courses'
 
 const Homepage = () => {
   return (
-    <div style={{ overflowX: 'hidden' }} className="flex flex-col bg-white max-md:pb-24">
+    <div style={{ overflowX: 'hidden' }} className="">
         <Hero />
         <ReviewSection />
         <Biography />
@@ -22,6 +22,7 @@ const Homepage = () => {
         <AutoCarouselCard />
         <Events />
         <Courses />
+
         {/* <ImageQuoteTextSection /> */}
 
         {/* <ImageWithQuoteCard /> */}
