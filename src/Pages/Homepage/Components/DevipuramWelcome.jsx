@@ -29,13 +29,15 @@ export const ReviewSection = () => {
         </div>
 
         {/* Right Column – Fixed Width */}
-        <div
-          className="flex flex-col items-start text-left italic text-xl md:text-2xl text-gray-700 leading-snug"
-          style={{ width: "1023px", maxWidth: "100%" }}
-        >
-          <span>Welcome to the official Website of Devipuram</span>
-          <span>the Adobe of devi Sri Sri Sri Sahasrakshi!</span>
-        </div>
+        {/* Right Column – Fixed Width */}
+<div
+  className="flex flex-col items-start text-left italic text-xl md:text-2xl text-gray-700 leading-snug"
+  style={{ width: "710px", maxWidth: "100%" }}
+>
+  <span>Welcome to the official Website of Devipuram</span>
+  <span>the Adobe of devi Sri Sri Sri Sahasrakshi!</span>
+</div>
+
       </div>
     </section>
   );

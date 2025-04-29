@@ -35,8 +35,11 @@ const SriChakraSection = () => {
         </div>
 
         {/* Image Column */}
+        {/* Image Column */}
+{/* Image Column */}
+{/* Image Column */}
         <div className="w-full max-w-[620px] h-auto flex justify-center lg:justify-start">
-          <div className="w-full aspect-square rounded-xl shadow-md overflow-hidden bg-gray-100">
+          <div className="w-full aspect-square rounded-xl overflow-hidden bg-transparent custom-shadow">
             <img
               src={SRICHAKRA}
               alt="Sri Chakra Yantra"
@@ -49,6 +52,9 @@ const SriChakraSection = () => {
             />
           </div>
         </div>
+
+
+
         
       </div>
     </section>

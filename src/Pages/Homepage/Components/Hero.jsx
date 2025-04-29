@@ -66,13 +66,17 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative w-full h-[968px] max-w-[1920px] mx-auto overflow-hidden flex flex-col justify-center items-start px-20 py-24 text-white font-medium max-2xl:px-16 max-xl:px-12 max-lg:px-10 max-md:px-6 max-sm:px-4 max-md:py-16 max-sm:py-12">
-      {/* Background image */}
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets%2F2b3aab135b374765b2e5b5958165ba0b%2F281b02db30054c23909526847c2aaff0"
-        alt="Background"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
+    <section className="relative w-full h-[968px] 
+  max-2xl:h-[840px] 
+  max-xl:h-[720px] 
+  max-lg:h-[600px] 
+  max-md:h-[520px] 
+  max-sm:h-[440px] 
+  max-w-[1920px] mx-auto overflow-hidden flex flex-col justify-center items-start px-20 py-24 text-white font-medium 
+  max-2xl:px-16 max-xl:px-12 max-lg:px-10 max-md:px-6 max-sm:px-4 
+  max-md:py-16 max-sm:py-12">
+
+
 
       {/* Background video */}
       <video
