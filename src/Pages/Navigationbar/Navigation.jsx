@@ -25,7 +25,7 @@ export const Navigation = () => {
     setActiveLink("Home");
   }, []);
 
-  const handleNavClick = (name: string) => {
+  const handleNavClick = (name: String) => {
     setActiveLink(name);
     setMenuOpen(false);
   };
@@ -77,6 +77,7 @@ export const Navigation = () => {
           ))}
 
           {/* Sign In Button */}
+          {/* Sign In Button */}
           <button
             onClick={handleSignInClick}
             className={`flex gap-2 items-center transition duration-200 ${
@@ -85,15 +86,21 @@ export const Navigation = () => {
                 : "text-black hover:text-green-600"
             }`}
           >
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/2b3aab135b374765b2e5b5958165ba0b/ccf25594126c8423a424958e023d5b8f868018d0?placeholderIfAbsent=true"
-              alt="Sign In"
-              className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6"
-            />
+            {/** Check that src is non-empty */}
+            {Boolean(
+              "https://cdn.builder.io/api/v1/image/assets/2b3aab135b374765b2e5b5958165ba0b/ccf25594126c8423a424958e023d5b8f868018d0"
+            ) && (
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/2b3aab135b374765b2e5b5958165ba0b/ccf25594126c8423a424958e023d5b8f868018d0"
+                alt="Sign In"
+                className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6"
+              />
+            )}
             <span className="text-xs sm:text-sm md:text-base lg:text-lg">
               Sign In
             </span>
           </button>
+
         </div>
       </div>
     </nav>

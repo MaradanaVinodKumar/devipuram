@@ -49,7 +49,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <section className="bg-[#f8f8f7] py-20 px-[10%]">
+    <section className="bg-[#f8f8f7] py-20 px-[10%] max-w-[1920px] mx-auto">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-2xl md:text-5xl font-bold text-black">
           Sacred Voices From the Path
@@ -71,26 +71,27 @@ const TestimonialCarousel = () => {
       </div>
 
       <div
-        ref={scrollRef}
-        className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-[2vw] hide-scrollbar hideScrollBar"
-      >
-        {testimonials.map((item, idx) => (
-  <div
-    key={idx}
-    className="flex-shrink-0 w-[85vw] sm:w-[55vw] md:w-[24vw] min-h-[27rem] bg-pink-50 p-6 rounded-2xl shadow-md snap-start"
-  >
-    <div className="text-yellow-500 text-2xl mb-4">★★★★★</div>
-    <h3 className="font-semibold text-xl md:text-2xl text-black mb-3 leading-snug">
-      {item.title}
-    </h3>
-    <p className="italic text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
-      "{item.quote}"
-    </p>
-    <p className="text-sm text-gray-500 font-semibold">{item.name}</p>
-  </div>
-))}
+  ref={scrollRef}
+  className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 hide-scrollbar"
+  style={{ maxWidth: '1920px', margin: '0 auto' }} // Fix max width for scroll container
+>
+  {testimonials.map((item, idx) => (
+    <div
+      key={idx}
+      className="flex-shrink-0 w-[30%] max-w-[460px] min-w-[460px] min-h-[27rem] bg-pink-50 p-6 rounded-2xl shadow-md snap-start"
+    >
+      <div className="text-yellow-500 text-2xl mb-4">★★★★★</div>
+      <h3 className="font-semibold text-xl md:text-2xl text-black mb-3 leading-snug">
+        {item.title}
+      </h3>
+      <p className="italic text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
+        "{item.quote}"
+      </p>
+      <p className="text-sm text-gray-500 font-semibold">{item.name}</p>
+    </div>
+  ))}
+</div>
 
-      </div>
     </section>
   );
 };

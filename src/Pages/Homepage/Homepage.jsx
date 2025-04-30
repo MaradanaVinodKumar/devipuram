@@ -10,11 +10,12 @@ import BlogCarousel from './Components/BlogCarousel'
 import { Footer } from './Components/Footer'
 import { Events } from './Components/Events'
 import { Courses } from './Components/Courses'
-
+import ImageWithQuoteCard from './Components/GurujiQuoteSection'
 
 const Homepage = () => {
   return (
-    <div style={{ overflowX: 'hidden' }} className="">
+    <div className="max-w-full mx-auto overflow-x-hidden px-4 lg:px-0">
+      <div className="container mx-auto">
         <Hero />
         <ReviewSection />
         <Biography />
@@ -22,14 +23,16 @@ const Homepage = () => {
         <AutoCarouselCard />
         <Events />
         <Courses />
-
-        {/* <ImageQuoteTextSection /> */}
-
-        {/* <ImageWithQuoteCard /> */}
+        <ImageWithQuoteCard />
         <TestimonialCarousel />
         <SriChakraSection />
         <BlogCarousel />
+      </div>
+
+      {/* Full-width Footer */}
+      <div className="w-full">
         <Footer />
+      </div>
     </div>
   )
 }
