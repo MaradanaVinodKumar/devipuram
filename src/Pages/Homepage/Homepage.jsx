@@ -31,6 +31,7 @@ const Homepage = () => {
         <BlogCarousel />
         <Footer />
     </div>
+    // need to start from here and add the rest of the components
   )
 }
 
