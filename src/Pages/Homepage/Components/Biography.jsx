@@ -2,10 +2,10 @@ import React from 'react';
 
 export const Biography = () => {
   return (
-    <section className="w-full bg-white py-16 px-[10%] max-xl:px-[8%] max-lg:px-[5%] max-md:py-10 max-md:px-4">
-      <div className="mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 max-w-[1440px]">
+    <section className="w-full bg-white py-16 px-[10%] max-2xl:px-[8%] max-xl:px-[5%] max-lg:px-6 max-md:py-10 max-md:px-4">
+      <div className="mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 max-w-[1440px]">
         {/* Text Content - Left Side */}
-        <div className="w-full lg:w-1/2 flex-shrink-0 pr-2 lg:pr-4">
+        <div className="w-full lg:w-1/2 flex-shrink-0">
           <article className="flex flex-col text-black">
             <h2 className="text-4xl md:text-5xl font-medium leading-snug md:leading-[64px]">
               A Captivating<br />Biography
@@ -22,8 +22,8 @@ export const Biography = () => {
         </div>
 
         {/* Image - Right Side */}
-        <div className="w-full lg:w-1/2 flex justify-center pl-2 lg:pl-4">
-          <div className="w-full aspect-[1023/908] max-w-[800px] bg-white rounded-lg overflow-hidden">
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <div className="w-full aspect-[1023/908] max-w-[800px] bg-white rounded-lg overflow-hidden"> {/* Set bg-white here */}
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F2b3aab135b374765b2e5b5958165ba0b%2F0096461262b447dfa23fee919bc04fe8"
               alt="Devipuram Temple"

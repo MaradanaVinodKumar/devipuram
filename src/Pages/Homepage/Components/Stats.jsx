@@ -3,7 +3,7 @@ import React from "react";
 export const Stats = () => {
   return (
     <section className="w-full mt-28 mb-[5%] px-[10%] max-md:mt-12">
-      <div className="max-w-[1920px] mx-auto grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-2 gap-8 text-center">
+      <div className="grid grid-cols-4 max-2xl:grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-2 gap-8 text-center">
         {/* Stat Block */}
         {[
           { value: "35+", label: "Years of Tradition" },
