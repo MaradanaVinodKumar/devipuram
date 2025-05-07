@@ -39,9 +39,7 @@ export const Events = () => {
   return (
     <section className="flex flex-col items-start w-full px-[10%] max-xl:px-[6%] max-lg:px-4 max-sm:px-3 max-xs:px-2">
       {/* Heading */}
-      <h2 className="mt-20 mb-4 text-5xl font-medium tracking-tighter leading-none text-black 
-                     max-lg:mt-16 max-md:mt-12 max-md:text-4xl 
-                     max-sm:mt-10 max-sm:text-3xl max-xs:text-3xl">
+      <h2 className="text-4xl md:text-5xl font-medium leading-snug md:leading-[64px]">
         Discover Upcoming Events
       </h2>
 
@@ -57,16 +55,18 @@ export const Events = () => {
           Enriching courses &amp; programs on Sri Vidya festivals, <br className="max-sm:hidden" />
           and enlightening spiritual retreats
         </p>
-        <button className="px-8 py-3 h-14 text-xl font-medium border border-slate-800 rounded-full text-slate-800 
+        <button className="px-8 py-3 h-14 text-xl font-medium border-2 border-slate-800 rounded-full text-slate-800 
                           hover:bg-[#46DE46] hover:text-[#0C3D3D] active:bg-[#46DE46] active:text-[#0C3D3D] 
-                          transition-all duration-300 active:scale-95 
+                          active:border-none transition-all duration-300 active:scale-95 
                           max-xl:px-6 max-xl:py-2.5 max-xl:h-12 max-xl:text-lg 
                           max-lg:px-5 max-lg:text-base 
                           max-md:h-11 max-md:px-5 max-md:py-2 
                           max-sm:w-full max-sm:mt-2 max-sm:text-sm 
                           max-xs:h-10 max-xs:px-4">
-          View All Events
-        </button>
+  View All Events
+</button>
+
+
       </div>
 
       {/* Grid of Events */}

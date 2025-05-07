@@ -62,16 +62,12 @@ const BlogCarousel = () => {
     <div className="px-[5%] md:px-[8%] xl:px-[10%] py-8 font-sans flex flex-col lg:flex-row gap-8">
       {/* Left Column */}
       <div className="lg:w-[30%]">
-        <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl md:text-5xl font-medium leading-snug md:leading-[64px]">
           Explore The Blog
         </h2>
-        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-          The secret to being a morning person?<br />
-          Finding out what works for you. Go<br />
-          behind the scenes with these Amazing<br />
-          Humans to see how starting the day with<br />
-          a routine you feel good about makes all<br />
-          the difference.
+        <p className="mt-6 md:mt-8 text-lg md:text-2xl leading-relaxed md:leading-10 text-gray-800">
+          The secret to being a morning person? Finding out what works for you. Go behind the scenes with these Amazing Humans to see how starting the day with
+          a routine you feel good about makes all the difference.
         </p>
       </div>
 

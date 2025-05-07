@@ -77,9 +77,10 @@ export default function AutoCarouselCard() {
 
   return (
     <div className="w-full bg-white py-8 px-[10%] max-xl:px-[6%] max-lg:px-4 max-sm:px-3">
-      <h2 className="text-2xl sm:text-5xl font-bold mb-10 text-left">
+      <h2 className="text-4xl md:text-5xl font-medium leading-snug md:leading-[64px]">
         Explore Upcoming Content
       </h2>
+      <br/>
       <div className="relative overflow-hidden">
         <motion.div
           className="flex gap-6 max-md:gap-4"
