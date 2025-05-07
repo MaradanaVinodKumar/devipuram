@@ -33,6 +33,7 @@ export const Navigation = () => {
   const handleSignInClick = () => {
     setActiveLink("Sign In");
     setMenuOpen(false);
+    navigate("/Signin", { replace: true });
   };
 
   return (

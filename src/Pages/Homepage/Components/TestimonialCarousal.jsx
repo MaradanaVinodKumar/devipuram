@@ -51,7 +51,7 @@ const TestimonialCarousel = () => {
   return (
     <section className="bg-[#f8f8f7] py-20 px-[10%]">
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-2xl md:text-5xl font-bold text-black">
+        <h2 className="text-4xl md:text-5xl font-medium leading-snug md:leading-[64px]">
           Sacred Voices From the Path
         </h2>
         <div className="flex space-x-2">

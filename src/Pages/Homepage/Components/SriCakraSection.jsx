@@ -10,15 +10,15 @@ const SriChakraSection = () => {
         
         {/* Text Column */}
         <div className="w-full max-w-[620px] text-black">
-          <h2 className="text-[2.75rem] md:text-[3.25rem] font-semibold mb-12 tracking-wider leading-tight">
+          <h2 className="text-4xl md:text-5xl font-medium leading-snug md:leading-[64px]">
             Sri Chakra
           </h2>
-          <p className="text-[1.375rem] md:text-[1.5rem] leading-[2.25rem] tracking-wide mb-12">
+          <p className="mt-6 md:mt-8 text-lg md:text-2xl leading-relaxed md:leading-10 text-gray-800">
             The Sri Chakra consists of nine interlocking triangles that surround a central point (bindu). 
             The four upward-pointing triangles represent Shiva, while the five downward-pointing triangles 
             represent Shakti.
           </p>
-          <p className="text-[1.375rem] md:text-[1.5rem] leading-[2.25rem] tracking-wide mb-8">
+          <p className="mt-6 md:mt-8 text-lg md:text-2xl leading-relaxed md:leading-10 text-gray-800">
             This sacred geometric pattern is considered one of the most powerful yantras in Hindu tantric tradition,
             representing the cosmic energies and the union of masculine and feminine divine principles.
           </p>

@@ -10,11 +10,12 @@ import BlogCarousel from './Components/BlogCarousel'
 import { Footer } from './Components/Footer'
 import { Events } from './Components/Events'
 import { Courses } from './Components/Courses'
-
+import ImageWithQuoteCard from './Components/GurujiQuoteSection'
 
 const Homepage = () => {
   return (
-    <div style={{ overflowX: 'hidden' }} className="">
+    <div style={{ overflowX: 'hidden' }}>
+      <div className="mx-auto" style={{ maxWidth: '1920px' }}>
         <Hero />
         <ReviewSection />
         <Biography />
@@ -22,16 +23,14 @@ const Homepage = () => {
         <AutoCarouselCard />
         <Events />
         <Courses />
-
-        {/* <ImageQuoteTextSection /> */}
-
-        {/* <ImageWithQuoteCard /> */}
+        <ImageWithQuoteCard />
         <TestimonialCarousel />
         <SriChakraSection />
         <BlogCarousel />
         <Footer />
+
     </div>
-    // need to start from here and add the rest of the components
+    </div>
   )
 }
 
