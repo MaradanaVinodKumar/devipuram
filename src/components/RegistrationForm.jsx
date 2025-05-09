@@ -1,7 +1,7 @@
 // RegisterForm.js
 import React, { useEffect, useRef, useState } from 'react';
 import { s } from 'framer-motion/client';
-import { CreateNewUser } from '../context/userContext';
+import { CreateNewUser, RegisterUser } from '../context/userContext';
 import { firestore } from '../context/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 
@@ -52,16 +52,35 @@ function RegisterForm() {
       Password: formData.password,
     }
  
-    CreateNewUser(data)
-    .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
-        // alert("User registered successfully!");
-        setSuccess("User registered successfully!");
-    })
-    .catch((error) => {
-        console.error("Error adding document: ", error);
+    // CreateNewUser(data)
+    // .then((docRef) => {
+    //     console.log("Document written with ID: ", docRef.id);
+    //     // alert("User registered successfully!");
+       
 
-    })
+    //     setSuccess("User registered successfully!");
+    // })
+    // .catch((error) => {
+    //     console.error("Error adding document: ", error);
+
+    // })
+    // .finally(()=>{
+    //   setLoading(false);
+    // })
+
+    RegisterUser(formData.email, formData.password)
+    .then((userCredential) => {
+      // Registration successful
+      const user = userCredential?.user;
+      console.log("Registered as:", user?.email);
+      setSuccess("Registered as:", user?.email);
+    }
+    )
+    .catch((error) => {
+      console.log("Registration error:", error);
+      // setError("Registration error:", error.response.error.message);
+       setError(error.message);
+       })
     .finally(()=>{
       setLoading(false);
     })

@@ -25,7 +25,7 @@ export const Navigation = () => {
     setActiveLink("Home");
   }, []);
 
-  const handleNavClick = (name: string) => {
+  const handleNavClick = (name) => {
     setActiveLink(name);
     setMenuOpen(false);
   };
@@ -33,7 +33,7 @@ export const Navigation = () => {
   const handleSignInClick = () => {
     setActiveLink("Sign In");
     setMenuOpen(false);
-    navigate("/Signin", { replace: true });
+    navigate("/AuthPage", { replace: true });
   };
 
   return (

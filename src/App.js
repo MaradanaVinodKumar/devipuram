@@ -13,6 +13,7 @@ import Login from './components/Login';
 import RegisterForm from './components/RegistrationForm';
 import LoginForm from './components/Login';
 import { div } from 'framer-motion/client';
+import AuthPage from './components/AuthPage';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <Route path="Guruji" element={<Guruji />} />
           <Route path="PoojasAndHomas" element={<PoojasAndHomas />} />
           <Route path="Signin" element={<RegisterForm />} />
+          <Route path="Login" element={<LoginForm />} />
+          <Route path='Authpage' element={<AuthPage />} />
         </Routes>
       </div>
     </Router>
