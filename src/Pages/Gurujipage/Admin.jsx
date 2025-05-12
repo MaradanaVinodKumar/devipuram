@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import EventCard from './EventCard';
-
-// Content Components with "Add" buttons
+import { useAuth } from '../../context/authContext';
 
 const EventsContent = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,7 +23,6 @@ const EventsContent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Event Submitted:', eventData);
-    // Clear form and close modal
     setEventData({ title: '', date: '', image: null, description: '' });
     setShowModal(false);
   };
@@ -46,7 +45,6 @@ const EventsContent = () => {
         <li className="py-1">Past Event A - Date</li>
       </ul>
 
-      {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
@@ -85,8 +83,11 @@ const EventsContent = () => {
                 rows="3"
                 required
               />
-              <div>
-                <EventCard date={eventData.date} description={eventData.description} image={eventData.image} title={eventData.title}/>
+              <div> 
+                Preview Event Card :
+              </div>
+              <div style={{padding: '10px',backgroundColor:"#00000030",boxShadow:"inset 0 0 10px black", borderRadius: '10px'}}>
+                <EventCard {...eventData} />
               </div>
               <div className="flex justify-end gap-2">
                 <button
@@ -111,10 +112,9 @@ const EventsContent = () => {
   );
 };
 
-
 const CoursesContent = ({ onAddCourse }) => (
   <div>
-    <div className="flex justify-between items-center mb-6"> {/* Increased mb */}
+    <div className="flex justify-between items-center mb-6">
       <h1 className="text-2xl font-semibold">Courses</h1>
       <button
         onClick={onAddCourse}
@@ -133,11 +133,11 @@ const CoursesContent = ({ onAddCourse }) => (
 
 const PoojasContent = ({ onAddPooja }) => (
   <div>
-    <div className="flex justify-between items-center mb-6"> {/* Increased mb */}
+    <div className="flex justify-between items-center mb-6">
       <h1 className="text-2xl font-semibold">Poojas</h1>
       <button
         onClick={onAddPooja}
-        className="bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded text-sm" // Changed color for distinction
+        className="bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded text-sm"
       >
         Add New Pooja
       </button>
@@ -150,26 +150,20 @@ const PoojasContent = ({ onAddPooja }) => (
   </div>
 );
 
-
 const App = () => {
   const [activeSection, setActiveSection] = useState('events');
-
-  // Placeholder functions for adding items
-  const handleAddEvent = () => {
-    console.log("Add Event button clicked. Implement form/modal here.");
-    // Example: You might set another state here to show a modal
-    // setShowEventForm(true);
+  const navigate = useNavigate();
+ const { isAuthenticated, logout } = useAuth();
+  const handleLogout = () => {
+    // Replace with your logout logic (e.g., authContext.logout())
+    logout();
+    console.log("Logging out...");
+    navigate("/");
   };
 
-  const handleAddCourse = () => {
-    console.log("Add Course button clicked. Implement form/modal here.");
-    // setShowCourseForm(true);
-  };
-
-  const handleAddPooja = () => {
-    console.log("Add Pooja button clicked. Implement form/modal here.");
-    // setShowPoojaForm(true);
-  };
+  const handleAddEvent = () => console.log("Add Event button clicked.");
+  const handleAddCourse = () => console.log("Add Course button clicked.");
+  const handleAddPooja = () => console.log("Add Pooja button clicked.");
 
   const renderContent = () => {
     switch (activeSection) {
@@ -193,36 +187,46 @@ const App = () => {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex" style={{ height: '90.7vh' }}>
       {/* Sidebar */}
-      <aside className="w-64 bg-gray-800 text-white p-4 flex-shrink-0">
-        <h2 className="text-xl font-bold mb-6">Menu</h2>
-        <ul>
-          <li className="mb-3">
-            <button
-              onClick={() => setActiveSection('events')}
-              className={getLinkClassName('events')}
-            >
-              Events
-            </button>
-          </li>
-          <li className="mb-3">
-            <button
-              onClick={() => setActiveSection('courses')}
-              className={getLinkClassName('courses')}
-            >
-              Courses
-            </button>
-          </li>
-          <li className="mb-3">
-            <button
-              onClick={() => setActiveSection('poojas')}
-              className={getLinkClassName('poojas')}
-            >
-              Poojas
-            </button>
-          </li>
-        </ul>
+      <aside className="w-64 bg-gray-800 text-white p-4 flex-shrink-0 flex flex-col justify-between">
+        <div>
+          <h2 className="text-xl font-bold mb-6">Menu</h2>
+          <ul>
+            <li className="mb-3">
+              <button
+                onClick={() => setActiveSection('events')}
+                className={getLinkClassName('events')}
+              >
+                Events
+              </button>
+            </li>
+            <li className="mb-3">
+              <button
+                onClick={() => setActiveSection('courses')}
+                className={getLinkClassName('courses')}
+              >
+                Courses
+              </button>
+            </li>
+            <li className="mb-3">
+              <button
+                onClick={() => setActiveSection('poojas')}
+                className={getLinkClassName('poojas')}
+              >
+                Poojas
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div className="mt-6">
+          <button
+            onClick={handleLogout}
+            className="w-full text-left p-2 rounded hover:bg-red-600 bg-red-500 text-white"
+          >
+            Logout
+          </button>
+        </div>
       </aside>
 
       {/* Main content */}
