@@ -7,11 +7,10 @@ import { useAuth } from "../../context/authContext";
 export const Navigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated } = useAuth();
 
   const [activeLink, setActiveLink] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -23,16 +22,14 @@ export const Navigation = () => {
   ];
 
   useEffect(() => {
-    // Highlight "Home" on refresh or reload, even if on a different page
     if (location.pathname === "/") {
       setActiveLink("Home");
     } else {
-      // Find if the current path matches any of the nav links
       const matched = navLinks.find((link) => link.path === location.pathname);
       if (matched) {
-        setActiveLink(matched.name); // Highlight the matched link
+        setActiveLink(matched.name);
       } else {
-        setActiveLink("Home"); // Default to "Home" if no match
+        setActiveLink("Home");
       }
     }
   }, [location.pathname]);
@@ -43,20 +40,16 @@ export const Navigation = () => {
   };
 
   const handleSignInClick = () => {
-    setShowDropdown(false);
     setMenuOpen(false);
     navigate("/AuthPage");
   };
 
   const handleUserIconClick = () => {
-    setShowDropdown((prev) => !prev);
-  };
-
-  const handleSignOut = () => {
-    logout();
-    setShowDropdown(false);
-    setActiveLink("Home");
-    navigate("/");
+    if (isAuthenticated) {
+      navigate("/admin");
+    } else {
+      navigate("/AuthPage");
+    }
   };
 
   return (
@@ -102,7 +95,7 @@ export const Navigation = () => {
               src="https://cdn.builder.io/api/v1/image/assets/2b3aab135b374765b2e5b5958165ba0b/ccf25594126c8423a424958e023d5b8f868018d0?placeholderIfAbsent=true"
               alt="User"
               className="w-5 h-5 sm:w-6 sm:h-6 rounded-full"
-              onClick={isAuthenticated ? handleUserIconClick : handleSignInClick}
+              onClick={handleUserIconClick}
             />
 
             {!isAuthenticated && (
@@ -112,15 +105,6 @@ export const Navigation = () => {
               >
                 Sign In
               </span>
-            )}
-
-            {isAuthenticated && showDropdown && (
-              <div
-                onClick={handleSignOut}
-                className="absolute top-8 right-0 bg-white border shadow-md rounded-md px-4 py-2 text-sm hover:bg-red-100 z-50"
-              >
-                Sign Out
-              </div>
             )}
           </div>
         </div>
