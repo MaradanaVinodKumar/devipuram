@@ -59,20 +59,20 @@ const BlogCarousel = () => {
   };
 
   return (
-    <div className="px-[5%] md:px-[8%] xl:px-[10%] py-8 font-sans flex flex-col lg:flex-row gap-8">
+    <div className="px-[5%] md:px-[8%] xl:px-[10%] py-8 font-sans flex flex-col lg:flex-row gap-20">
       {/* Left Column */}
       <div className="lg:w-[30%]">
         <h2 className="text-4xl md:text-5xl font-medium leading-snug md:leading-[64px]">
           Explore The Blog
         </h2>
         <p className="mt-6 md:mt-8 text-lg md:text-2xl leading-relaxed md:leading-10 text-gray-800">
-          The secret to being a morning person? Finding out what works for you. Go behind the scenes with these Amazing Humans to see how starting the day with
+          The secret to being a morning person? Go behind the scenes with these Amazing Humans to see how starting the day with
           a routine you feel good about makes all the difference.
         </p>
       </div>
 
       {/* Right Column */}
-      <div className="lg:w-[70%] relative" ref={containerRef}>
+      <div className="lg:w-[70%] relative mt-10" ref={containerRef}>
         <div className="overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out gap-6"

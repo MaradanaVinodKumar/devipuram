@@ -24,7 +24,7 @@ const SriChakraSection = () => {
           </p>
           <br/> <br/> <br/>
           <button 
-            className={`px-8 py-3 text-xl font-medium rounded-full border ${
+            className={`w-full sm:w-auto px-8 py-3 text-xl font-medium rounded-full border ${
               isClicked 
                 ? 'bg-[#46DE46] text-[#0C3D3D] border-[#46DE46]' 
                 : 'bg-transparent text-black border-black'
@@ -33,6 +33,7 @@ const SriChakraSection = () => {
           >
             Know More
           </button>
+
         </div>
 
         {/* Image Column */}

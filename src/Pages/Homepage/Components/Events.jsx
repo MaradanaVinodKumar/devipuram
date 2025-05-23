@@ -1,4 +1,5 @@
 import React from "react";
+import { GRID_IMAGE1, GRID_IMAGE2, GRID_IMAGE3, GRID_IMAGE4 } from "../../../Constants/Images";
 
 const eventData = [
   {
@@ -6,32 +7,28 @@ const eventData = [
     title: "Sri Lalitambika Navaratri 2025",
     date: "30 March 25",
     location: "Visakhapatnam",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2b3aab135b374765b2e5b5958165ba0b%2F93d4b040785946e7a1b00504f32fc936",
+    image: GRID_IMAGE1,
   },
   {
     id: 2,
     title: "Annual Devi Mahotsavam",
     date: "30 March 25",
     location: "Visakhapatnam",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2b3aab135b374765b2e5b5958165ba0b%2Fee126d435b15464fa309d231648609d5",
+    image: GRID_IMAGE2,
   },
   {
     id: 3,
     title: "Sri Lalitambika Navaratri 2025",
     date: "30 March 25",
     location: "Visakhapatnam",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2b3aab135b374765b2e5b5958165ba0b%2F93d4b040785946e7a1b00504f32fc936",
+    image: GRID_IMAGE3,
   },
   {
     id: 4,
     title: "Annual Devi Mahotsavam",
     date: "30 March 25",
     location: "Visakhapatnam",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2F2b3aab135b374765b2e5b5958165ba0b%2Fee126d435b15464fa309d231648609d5",
+    image: GRID_IMAGE4,
   },
 ];
 

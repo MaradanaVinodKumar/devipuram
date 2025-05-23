@@ -11,7 +11,7 @@ const ImageWithQuoteCard = () => {
   return (
     <section className="w-full px-[5%] sm:px-[7%] md:px-[10%] my-16">
       <div
-        className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-20 mx-auto"
+        className="flex flex-col lg:flex-row justify-between lg:items-center items-start gap-12 lg:gap-20 mx-auto"
         style={{ maxWidth: '1547px' }}
       >
         {/* Left Section: Image */}
@@ -19,7 +19,7 @@ const ImageWithQuoteCard = () => {
           className="relative w-full max-w-[722px] h-auto"
           style={{ maxHeight: '740px' }}
         >
-          <div className="overflow-hidden rounded-xl shadow-lg w-full h-full">
+          <div className="overflow-hidden rounded-xl">
             <img
               src={GURUJI_IMAGE}
               alt="Devipuram Temple"
@@ -31,7 +31,7 @@ const ImageWithQuoteCard = () => {
         {/* Right Section: Text */}
         <div
           className="flex flex-col justify-start pt-4 w-full"
-          style={{ maxWidth: '705px !important', minHeight: '579px' }}
+          style={{ maxWidth: '705px', minHeight: '579px' }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium leading-snug md:leading-[64px]">
             Biography
@@ -52,8 +52,6 @@ const ImageWithQuoteCard = () => {
           >
             Know more
           </button>
-
-
         </div>
       </div>
     </section>
