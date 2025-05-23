@@ -28,6 +28,16 @@ export const Courses = () => {
                 news about course announcements!
               </p>
             </article>
+             <button
+                onClick={handleClick}
+                className={`self-start w-[263px] h-[66px] max-md:w-full mt-14 px-16 pt-4 pb-5 text-2xl font-semibold rounded-[52px] max-md:px-8 max-md:py-3 max-md:text-lg border transition-colors duration-300 ${
+                  isClicked
+                    ? "bg-[#46DE46] text-[#0C3D3D] border-[#46DE46]"
+                    : "bg-transparent text-black border-black hover:bg-[#46DE46] hover:text-[#0C3D3D] hover:border-[#46DE46]"
+                }`}
+              >
+                Know More
+              </button>
           </div>
 
           <div className="ml-5 w-[58%] md:w-full max-md:w-full">
@@ -39,16 +49,7 @@ export const Courses = () => {
           </div>
         </div>
 
-        <button
-          onClick={handleClick}
-          className={`self-start w-[263px] h-[66px] max-md:w-full mt-20 px-16 pt-4 pb-5 text-2xl font-semibold rounded-[52px] max-md:px-8 max-md:py-3 max-md:text-lg border transition-colors duration-300 ${
-            isClicked
-              ? "bg-[#46DE46] text-[#0C3D3D] border-[#46DE46]"
-              : "bg-transparent text-black border-black hover:bg-[#46DE46] hover:text-[#0C3D3D] hover:border-[#46DE46]"
-          }`}
-        >
-          Know More
-        </button>
+       
       </div>
 
       {/* Custom CSS for exactly 768px tablet width */}
