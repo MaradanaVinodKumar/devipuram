@@ -38,7 +38,9 @@ const ImageWithQuoteCard = () => {
           </h2>
           <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-2xl leading-relaxed md:leading-10 text-gray-800">
             Born in 1934 in Visakhapatnam, Sri Amritananda Natha Saraswati was a nuclear scientist by profession. 
-            He completed his Ph.D. in Nuclear Physics and worked at various institutions. His unique blend of scientific knowledge and spiritual wisdom...
+            He completed his Ph.D. in Nuclear Physics and worked at various institutions. His unique blend of scientific knowledge and spiritual wisdom.
+             Born in 1934 in Visakhapatnam, Sri Amritananda Natha Saraswati was a nuclear scientist by profession. 
+            He completed his Ph.D. in Nuclear Physics and worked at various institutions. His unique blend of scientific knowledge and spiritual wisdom
           </p>
           <button
             onClick={handleClick}
@@ -46,10 +48,12 @@ const ImageWithQuoteCard = () => {
               ${isClicked
                 ? 'bg-[#46DE46] text-[#0C3D3D] border-none'
                 : 'bg-transparent text-black border border-gray-400 hover:bg-[#46DE46] hover:text-[#0C3D3D]'} 
-              w-full sm:w-auto`}
+              w-full sm:w-auto xl:w-[263px] xl:h-[66px] xl:rounded-[52px] xl:text-[24px]`}
           >
             Know more
           </button>
+
+
         </div>
       </div>
     </section>

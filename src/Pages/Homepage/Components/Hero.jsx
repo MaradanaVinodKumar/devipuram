@@ -106,7 +106,7 @@ export const Hero = () => {
             <div key={index} className="flex-shrink-0 w-full">
               <div className="flex flex-col justify-between gap-6">
                 <div>
-                  <h1 className="text-[104px] leading-[1.1] font-extrabold max-2xl:text-[80px] max-xl:text-[64px] max-lg:text-[52px] max-md:text-[40px] max-sm:text-[32px] max-sm:leading-tight">
+                  <h1 className="text-[173px] leading-[0.6] font-extrabold max-2xl:text-[173px] max-xl:text-[64px] max-lg:text-[52px] max-md:text-[40px] max-sm:text-[32px] max-sm:leading-tight">
                     <span
                       style={{
                         fontFamily: "Peddana, -apple-system, Roboto, Helvetica, sans-serif",

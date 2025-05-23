@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        instrument:['"Instrument sans"', 'sans-serif'],
+        peddana:['Peddana', 'serif'],
+        poppins:['Poppins', 'sans-serif']
+      }
+    },
   },
   plugins: [
     require('tailwind-scrollbar-hide'),

@@ -22,6 +22,7 @@ const SriChakraSection = () => {
             This sacred geometric pattern is considered one of the most powerful yantras in Hindu tantric tradition,
             representing the cosmic energies and the union of masculine and feminine divine principles.
           </p>
+          <br/> <br/> <br/>
           <button 
             className={`px-8 py-3 text-xl font-medium rounded-full border ${
               isClicked 
@@ -39,7 +40,7 @@ const SriChakraSection = () => {
 {/* Image Column */}
 {/* Image Column */}
         <div className="w-full max-w-[620px] h-auto flex justify-center lg:justify-start">
-          <div className="w-full aspect-square rounded-xl overflow-hidden bg-transparent custom-shadow">
+          <div className="w-full aspect-square rounded-xl overflow-hidden bg-white custom-shadow">
             <img
               src={SRICHAKRA}
               alt="Sri Chakra Yantra"
