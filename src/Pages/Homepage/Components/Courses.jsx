@@ -8,7 +8,7 @@ export const Courses = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-start py-48 pr-[10%] pl-[10%] mt-9 w-full bg-neutral-100 max-md:px-5 max-md:py-24 max-md:mt-10">
+    <section className="flex flex-col justify-center items-start py-48 pr-[10%] pl-[10%] mt-5 w-full bg-neutral-100 max-md:px-5 max-md:py-24 max-md:mt-10">
       <div className="flex flex-col -mb-10 w-full max-w-[1540px] max-md:mb-2.5 max-md:max-w-full">
         {/* Tablet-only class applied */}
         <div className="tablet-stack flex gap-5 max-md:flex-col max-md:max-w-full">
