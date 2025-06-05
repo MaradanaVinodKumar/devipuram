@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import { HERO_VEDIO } from "../../../Constants/Images";
 
 export const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -89,7 +90,7 @@ export const Hero = () => {
       >
         <source
           type="video/mp4"
-          src="https://cdn.builder.io/o/assets%2F2b3aab135b374765b2e5b5958165ba0b%2Ff342d8c520e144668b4839388eb859c4%2Fcompressed?apiKey=2b3aab135b374765b2e5b5958165ba0b&token=f342d8c520e144668b4839388eb859c4&alt=media&optimized=true"
+          src= {HERO_VEDIO}
         />
       </video>
 

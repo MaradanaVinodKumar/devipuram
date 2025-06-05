@@ -15,6 +15,7 @@ export const GRID_IMAGE1 = require('../Assets/Images/gridimage1.png');
 export const GRID_IMAGE2 = require('../Assets/Images/gridimage2.png');
 
 export const GURUJI_IMAGE = require('../Assets/Images/gurujiimage.png');
+export const HERO_VEDIO = require('../Assets/Videos/herovideo.mp4');
 
 
   
